@@ -18,13 +18,13 @@ const About = () => {
 
           <p className="py-2 text-gray-600">
             Before the SEI course, I was a resource planner for one of the
-            Asia's largest defence and engineering group for 2 years, managing a
-            team of technicians to ensure smooth and efficient workflows. My
-            interest in software engineering piqued during the circuit breaker
-            period when I meddled with online coding courses. That led me to a
-            newfound sense of fulfillment in writing codes and building apps.
-            Now, I help others discover the same sense of satisfaction and am
-            excited to dive into the world of tech!
+            Asia&apos;s largest defence and engineering group for 2 years,
+            managing a team of technicians to ensure smooth and efficient
+            workflows. My interest in software engineering piqued during the
+            circuit breaker period when I meddled with online coding courses.
+            That led me to a newfound sense of fulfillment in writing codes and
+            building apps. Now, I help others discover the same sense of
+            satisfaction and am excited to dive into the world of tech!
           </p>
           <p>Check out some of my latest projects.</p>
         </div>
