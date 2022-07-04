@@ -20,11 +20,23 @@ const Projects = () => {
             backgroundImg={musterclass}
             projectUrl="https://muster-class-nine.vercel.app/"
           />
+          <p className="m-auto">
+            Built with MERN with Typescript, MusterClass is a web-app that
+            allows users to view various lessons. Features include user
+            signup/login with JWT authentication, subscription plan via Stripe
+            API and view available lessons based on 3 subscription tiers.
+          </p>
           <ProjectItem
             title="Nyna-Airlines"
             backgroundImg={nynaairlines}
             projectUrl="https://nyna-airlines.vercel.app/"
           />
+          <p className="m-auto">
+            A collaborative project with two other team members. Nyna Airlines
+            is a web-based Flight Booking System. Features include ticket
+            booking, flight search and manage booking. Stripe API was integrated
+            to simulate mock payments. This project was built with MERN stack.
+          </p>
         </div>
       </div>
     </div>
