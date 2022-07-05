@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -26,7 +27,9 @@ const About = () => {
             building apps. Now, I help others discover the same sense of
             satisfaction and am excited to dive into the world of tech!
           </p>
-          <p>Check out some of my latest projects.</p>
+          <p>
+            <Link href="/#projects">Check out some of my latest projects.</Link>
+          </p>
         </div>
         {/* <div className="mt-5 w-[80%] h-[80%] p-2 flex items-center"> */}
         <div className="w-[80%] h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
