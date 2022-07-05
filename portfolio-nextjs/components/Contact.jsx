@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef, React } from "react";
 import Image from "next/image";
 import getintouch from "../public/assets/contactme/getintouch.jpg";
 import { AiOutlineMail } from "react-icons/ai";
@@ -6,8 +6,30 @@ import { BsFillPersonLinesFill, BsFolder } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
-
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "contact_service",
+        "template_ehcqull",
+        form.current,
+        process.env.EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  console.log(process.env.EMAILJS_PUBLIC_KEY);
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener, noreferrer");
   };
@@ -65,11 +87,12 @@ const Contact = () => {
           {/* right */}
           <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form>
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label className="uppercase text-sm py-2">Name</label>
                     <input
+                      name="from_name"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                     />
@@ -79,6 +102,7 @@ const Contact = () => {
                       Mobile Number
                     </label>
                     <input
+                      name="mobile"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                     />
@@ -89,6 +113,7 @@ const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="email"
+                    name="email"
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -96,11 +121,15 @@ const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
+                    name="subject"
                   />
                 </div>
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-sm py-2">Message</label>
-                  <textarea className="border-2 rounded-lg p-3 border-gray-300 rows-'10"></textarea>
+                  <textarea
+                    name="message"
+                    className="border-2 rounded-lg p-3 border-gray-300 rows-'10"
+                  ></textarea>
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">
                   Send Message
