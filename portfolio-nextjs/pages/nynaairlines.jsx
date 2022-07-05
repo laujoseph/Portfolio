@@ -32,8 +32,13 @@ const nynaairlines = () => {
             booking, flight search and manage booking. Stripe API was integrated
             to simulate mock payments. This project was built with MERN stack.
           </p>
-          <button className="px-8 py-2 mt-4 mr-8">Link To App</button>
-          <button className="px-8 py-2 mt-4 mr-8">Code</button>
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a href="https://nyna-airlines.vercel.app/">Link To App</a>
+          </button>
+
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a href="https://github.com/laujoseph/Nyna-Airlines">Code</a>
+          </button>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">

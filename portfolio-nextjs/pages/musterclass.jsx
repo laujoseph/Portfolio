@@ -26,14 +26,20 @@ const musterclass = () => {
         <div className="col-span-4">
           <p>Project</p>
           <h2>Overview</h2>
-          <p>
+          <p className="py-5">
             Built with MERN with Typescript, MusterClass is a web-app that
             allows users to view various lessons. Features include user
             signup/login with JWT authentication, subscription plan via Stripe
             API and view available lessons based on 3 subscription tiers.
           </p>
-          <button className="px-8 py-2 mt-4 mr-8">Link To App</button>
-          <button className="px-8 py-2 mt-4 mr-8">Code</button>
+
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a href="https://muster-class-nine.vercel.app">Link To App</a>
+          </button>
+
+          <button className="px-8 py-2 mt-4 mr-8">
+            <a href="https://github.com/laujoseph/MusterClass">Code</a>
+          </button>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
