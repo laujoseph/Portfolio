@@ -7,7 +7,12 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Contact = () => {
+  const success = () => toast("Thanks for reaching out!");
+  const failed = () => toast("Submission failed.");
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -17,11 +22,12 @@ const Contact = () => {
         "contact_service",
         "template_ehcqull",
         form.current,
-        process.env.EMAILJS_PUBLIC_KEY
+        "AJSDSZKyDIf1GevQr"
       )
       .then(
         (result) => {
           console.log(result.text);
+          success();
         },
         (error) => {
           console.log(error.text);
@@ -29,7 +35,6 @@ const Contact = () => {
       );
   };
 
-  console.log(process.env.EMAILJS_PUBLIC_KEY);
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener, noreferrer");
   };
@@ -134,6 +139,17 @@ const Contact = () => {
                 <button className="w-full p-4 text-gray-100 mt-4">
                   Send Message
                 </button>
+                <ToastContainer
+                  position="top-right"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                />
               </form>
             </div>
           </div>
