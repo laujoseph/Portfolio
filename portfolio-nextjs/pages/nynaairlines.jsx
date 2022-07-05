@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import musterclassimg from "../public/assets/projects/musterclassimg.png";
+
 import nynaairlinesimg from "../public/assets/projects/nyna_airlinesimg.png";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";

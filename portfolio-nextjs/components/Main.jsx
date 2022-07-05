@@ -35,10 +35,18 @@ const Main = () => {
               />
             </div>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <AiOutlineMail />
+              <a href="mailto:laujoseph.ys@gmail.com">
+                <AiOutlineMail />
+              </a>
             </div>
             <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <BsFillPersonLinesFill />
+              <BsFillPersonLinesFill
+                onClick={() =>
+                  openInNewTab(
+                    "https://drive.google.com/file/d/1TYYS_6Yil5fBnfvWZHYH9Qo8MGWzousR/view?usp=sharing"
+                  )
+                }
+              />
             </div>
           </div>
         </div>

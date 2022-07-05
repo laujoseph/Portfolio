@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const success = () => toast("Thanks for reaching out!");
-  const failed = () => toast("Submission failed.");
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -40,6 +40,17 @@ const Contact = () => {
   };
   return (
     <div id="contact" className="w-full lg:h-screen">
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-[#d67f0e]">
           Contact
@@ -80,10 +91,18 @@ const Contact = () => {
                     />
                   </div>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <AiOutlineMail />
+                    <a href="mailto:laujoseph.ys@gmail.com">
+                      <AiOutlineMail />
+                    </a>
                   </div>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <BsFillPersonLinesFill />
+                    <BsFillPersonLinesFill
+                      onClick={() =>
+                        openInNewTab(
+                          "https://drive.google.com/file/d/1TYYS_6Yil5fBnfvWZHYH9Qo8MGWzousR/view?usp=sharing"
+                        )
+                      }
+                    />
                   </div>
                 </div>
               </div>
@@ -139,17 +158,6 @@ const Contact = () => {
                 <button className="w-full p-4 text-gray-100 mt-4">
                   Send Message
                 </button>
-                <ToastContainer
-                  position="top-right"
-                  autoClose={5000}
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
-                />
               </form>
             </div>
           </div>

@@ -28,7 +28,11 @@ const About = () => {
             satisfaction and am excited to dive into the world of tech!
           </p>
           <p>
-            <Link href="/#projects">Check out some of my latest projects.</Link>
+            <Link href="/#projects">
+              <span className="hover:font-bold cursor-pointer">
+                Check out some of my latest projects.
+              </span>
+            </Link>
           </p>
         </div>
         {/* <div className="mt-5 w-[80%] h-[80%] p-2 flex items-center"> */}
