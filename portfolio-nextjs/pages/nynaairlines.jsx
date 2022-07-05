@@ -26,7 +26,7 @@ const nynaairlines = () => {
         <div className="col-span-4">
           <p>Project</p>
           <h2>Overview</h2>
-          <p>
+          <p className="py-5">
             A collaborative project with two other team members. Nyna Airlines
             is a web-based Flight Booking System. Features include ticket
             booking, flight search and manage booking. Stripe API was integrated
