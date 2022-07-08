@@ -1,4 +1,4 @@
-import { useRef, React } from "react";
+import { useState, useRef, React } from "react";
 import Image from "next/image";
 import getintouch from "../public/assets/contactme/getintouch.jpg";
 import { AiOutlineMail } from "react-icons/ai";
@@ -11,28 +11,44 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
-  const success = () => toast("Thanks for reaching out!");
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
 
+  const success = () => toast.success("Thanks for reaching out!");
+  const fail = () =>
+    toast.error("Please complete the fields before submitting, thank you.");
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "contact_service",
-        "template_ehcqull",
-        form.current,
-        "AJSDSZKyDIf1GevQr"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          success();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (!name || !email || !subject || !message) {
+      fail();
+    } else {
+      emailjs
+        .sendForm(
+          "contact_service",
+          "template_ehcqull",
+          form.current,
+          "AJSDSZKyDIf1GevQr"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            success();
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      setName("");
+      setMobile("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    }
   };
 
   const openInNewTab = (url) => {
@@ -119,6 +135,8 @@ const Contact = () => {
                       name="from_name"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
+                      onChange={(e) => setName(e.target.value)}
+                      value={name}
                     />
                   </div>
                   <div className="flex flex-col">
@@ -129,6 +147,8 @@ const Contact = () => {
                       name="mobile"
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="number"
+                      onChange={(e) => setMobile(e.target.value)}
+                      value={mobile}
                     />
                   </div>
                 </div>
@@ -138,6 +158,8 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="email"
                     name="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -146,6 +168,8 @@ const Contact = () => {
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
                     name="subject"
+                    onChange={(e) => setSubject(e.target.value)}
+                    value={subject}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -153,6 +177,8 @@ const Contact = () => {
                   <textarea
                     name="message"
                     className="border-2 rounded-lg p-3 border-gray-300 rows-'10"
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
                   ></textarea>
                 </div>
                 <button className="focus:outline-none focus:ring w-full p-4 text-gray-100 mt-4">
