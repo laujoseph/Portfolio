@@ -18,7 +18,7 @@ const About = () => {
           </p>
 
           <p className="py-2 text-gray-600">
-            Before the SEI course, I was a resource planner for one of the
+            Before the SEI course, I was a resource planner for one of
             Asia&apos;s largest defence and engineering group for 2 years,
             managing a team of technicians to ensure smooth and efficient
             workflows. My interest in software engineering piqued during the

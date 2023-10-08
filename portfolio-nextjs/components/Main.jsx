@@ -43,7 +43,7 @@ const Main = () => {
               <BsFillPersonLinesFill
                 onClick={() =>
                   openInNewTab(
-                    "https://drive.google.com/file/d/1TYYS_6Yil5fBnfvWZHYH9Qo8MGWzousR/view?usp=sharing"
+                    "https://drive.google.com/file/d/11085DxkRPZwElIKgFIxFzH2otgMzSa7k/view?usp=sharing"
                   )
                 }
               />
