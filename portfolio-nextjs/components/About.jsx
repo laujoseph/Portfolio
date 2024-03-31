@@ -12,9 +12,9 @@ const About = () => {
           <h2 className="py-4">Who I Am</h2>
           <br></br>
           <p className="py-2 text-gray-600">
-            I am a recent graduate from the General Assembly Software
-            Engineering Immersive (SEI), and have also worked as an
-            Instructional Associate for the batch after mine of the same course.
+            Hello! I'm a Software Developer who made the bold decision 
+            to pivot my career path and pursue my passion for technology by enrolling 
+            in the General Assembly Software Engineering Immersive Course (SEI) in early 2022. 
           </p>
 
           <p className="py-2 text-gray-600">
@@ -24,8 +24,14 @@ const About = () => {
             workflows. My interest in software engineering piqued during the
             circuit breaker period when I meddled with online coding courses.
             That led me to a newfound sense of fulfillment in writing codes and
-            building apps. Now, I help others discover the same sense of
-            satisfaction and am excited to dive into the world of tech!
+            building apps.</p>
+             
+            <p className="py-2 text-gray-600">
+             Since then, I've worked as an
+            Avaloq Software Developer and am eager to leverage my newfound skills and passion for technology 
+            to make a positive impact and drive meaningful change in the tech industry.
+            I am excited about the opportunities ahead and look forward to connecting with like-minded professionals 
+            who share my enthusiasm for innovation and creativity.
           </p>
           <p>
             <Link href="/#projects">

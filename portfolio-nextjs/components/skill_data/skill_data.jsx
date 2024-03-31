@@ -13,6 +13,14 @@ const skill_data = [
     name: "MongoDB",
   },
   { logo: "/../public/assets/skills/mui_logo.png", name: "MaterialUI" },
+  { logo: "/../public/assets/skills/redux_logo.png", name: "Redux" },
+  { logo: "/../public/assets/skills/firebase_logo.png", name: "Firebase" },
+  { logo: "/../public/assets/skills/next_logo.png", name: "Next" },
+  { logo: "/../public/assets/skills/express_logo.png", name: "Express" },
+  { logo: "/../public/assets/skills/git_logo.png", name: "Git" },
+  { logo: "/../public/assets/skills/typescript_logo.png", name: "Typescript" },
+  { logo: "/../public/assets/skills/sql_logo.png", name: "SQL" },
+  { logo: "/../public/assets/skills/es6_logo.png", name: "ES6" },
 ];
 
 export default skill_data;
