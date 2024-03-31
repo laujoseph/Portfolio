@@ -12,7 +12,7 @@ const About = () => {
           <h2 className="py-4">Who I Am</h2>
           <br></br>
           <p className="py-2 text-gray-600">
-            Hello! I'm a Software Developer who made the bold decision 
+            Hello! I&apos;m a Software Developer who made the bold decision 
             to pivot my career path and pursue my passion for technology by enrolling 
             in the General Assembly Software Engineering Immersive Course (SEI) in early 2022. 
           </p>
@@ -27,7 +27,7 @@ const About = () => {
             building apps.</p>
              
             <p className="py-2 text-gray-600">
-             Since then, I've worked as an
+            Since then, I&apos;ve worked as an
             Avaloq Software Developer and am eager to leverage my newfound skills and passion for technology 
             to make a positive impact and drive meaningful change in the tech industry.
             I am excited about the opportunities ahead and look forward to connecting with like-minded professionals 
